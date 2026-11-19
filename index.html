@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIBLE english — 영유 졸업 후, 뭐 읽히지? 챕터북·노블 TOP 100</title>
+<meta name="description" content="7–12세 영어원서 챕터북·노블 TOP 100. AR 레벨, 추천 나이, 단어팩, 서점별 가격을 한눈에. LIBLE english">
+<link rel="canonical" href="https://liblebooks.com/">
+<meta property="og:title" content="LIBLE english — 영어원서 TOP 100">
+<meta property="og:description" content="영유 졸업 후, 뭐 읽히지? AR 레벨별 챕터북·노블과 단어팩">
+<meta property="og:url" content="https://liblebooks.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'Pretendard';src:url('fonts/PretendardVariable.woff2') format('woff2-variations'),url('fonts/PretendardVariable.woff2') format('woff2');font-weight:45 920;font-display:swap}
+  :root{
+    --ink:#1e1714; --sub:#6b6866; --sub2:#908d8b; --line:#e8e8e6;
+    --beige:#f6f1ea; --red:#b5172b; --pill:#ece8e3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.2px}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;letter-spacing:inherit}
+  .wrap{max-width:688px;margin:0 auto;padding:0 18px 120px}
+
+  header{position:sticky;top:0;z-index:30;background:#fff}
+  .hd{max-width:688px;margin:0 auto;padding:0 18px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'Jost',sans-serif;font-weight:700;font-size:23px;letter-spacing:3px;color:var(--ink)}
+  .logo span{font-weight:600;letter-spacing:1.2px;margin-left:5px}
+  .hd-ic{display:flex;gap:18px}
+  .hd-ic svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.7}
+
+  .hero{padding:12px 0 18px}
+  .hero h1{font-size:38px;font-weight:700;line-height:1.28;letter-spacing:-1.3px}
+  .hero p{margin-top:12px;color:var(--sub);font-size:15px}
+
+  .feat{display:flex;align-items:center;gap:12px;background:var(--beige);border-radius:16px;padding:10px 16px 10px 10px;margin-bottom:14px;cursor:pointer;width:100%;text-align:left}
+  .feat .th{width:72px;height:40px;border-radius:8px;flex:none;display:flex;align-items:center;justify-content:center;font-size:20px;overflow:hidden}
+  .feat .tx{flex:1;min-width:0}
+  .feat .t1{font-size:14px;font-weight:700}
+  .feat .t2{font-size:12px;color:var(--sub);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .feat .go{font-size:13px;font-weight:700;color:var(--red);flex:none}
+
+  .search{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:14px 20px;margin:20px 0 18px;box-shadow:0 3px 12px rgba(30,23,20,.05)}
+  .search svg{width:18px;height:18px;stroke:#3a3431;fill:none;stroke-width:2;flex:none}
+  .search input{flex:1;border:none;outline:none;font-size:15px;font-family:inherit;background:transparent;color:var(--ink)}
+  .search input::placeholder{color:var(--sub2)}
+
+  .tabs{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none;font-size:16px;font-weight:500;color:var(--sub);padding:4px 0 9px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+  .tab.on{color:var(--ink);font-weight:700;border-color:var(--ink)}
+  .tabs.sm{gap:16px;border-bottom:none;margin-top:12px}
+  .tabs.sm .tab{font-size:13px;padding:2px 0 6px}
+
+  .strip{display:flex;justify-content:space-between;gap:4px;margin-top:22px;overflow-x:auto;scrollbar-width:none}
+  .strip::-webkit-scrollbar{display:none}
+  .dy{flex:1;min-width:44px;display:flex;flex-direction:column;align-items:center;gap:6px}
+  .dy small{font-size:11px;color:var(--sub)}
+  .dy b{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700}
+  .dy.on b{background:var(--ink);color:#fff}
+  .cal{display:block;width:max-content;margin:16px auto 0;font-size:13px;font-weight:700;border-bottom:1.5px solid var(--ink);padding-bottom:1px}
+
+  .lh{margin-top:34px}
+  .lh h2{font-size:17px;font-weight:700}
+  .tgs{display:flex;gap:16px;margin-top:14px;font-size:13px;color:var(--sub);font-weight:500}
+  .tgs button.on{color:var(--ink);font-weight:700}
+
+  .list{list-style:none;margin-top:18px}
+  .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);cursor:pointer}
+  .row:first-child{border-top:none}
+  .poster{width:76px;height:106px;flex:none;border-radius:2px;padding:7px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;overflow:hidden}
+  .poster .pt{font-family:'Jost','Pretendard',sans-serif;font-weight:700;font-size:10.5px;line-height:1.15}
+  .poster .pe{font-size:24px;align-self:flex-end}
+  .rbody{flex:1;min-width:0;position:relative}
+  .rtop{padding-right:56px}
+  .rbody h3{font-size:15px;font-weight:700;line-height:1.4}
+  .ract{position:absolute;top:0;right:0;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+  .heart svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.7}
+  .heart.on svg{fill:var(--red);stroke:var(--red)}
+  .ract .lk{font-size:12px;font-weight:700;color:var(--red)}
+  .rm{font-size:13px;color:var(--sub);margin-top:5px;line-height:1.5;padding-right:52px}
+  .box{display:inline-block;margin-top:6px;margin-right:4px;font-size:11px;font-weight:500;border:1px solid var(--ink);padding:1px 6px}
+  .empty{text-align:center;padding:60px 0;color:var(--sub);font-size:14px}
+  .src{font-size:11px;color:var(--sub2);margin-top:20px;line-height:1.6}
+  .rk .n{font-family:'Jost',sans-serif;font-size:22px;font-weight:700;width:22px;flex:none;align-self:center}
+
+  .view{display:none}
+  .view.on{display:block}
+  .vt{font-size:30px;font-weight:700;letter-spacing:-1px;margin:12px 0 6px}
+  .vs{color:var(--sub);font-size:14px;margin-bottom:18px}
+  .gd{padding:18px 0;border-bottom:1px solid var(--line)}
+  .gd .gl{display:flex;align-items:center;gap:12px}
+  .gd .gl b{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;font-size:15px;flex:none}
+  .gd h3{font-size:16px}
+  .gd .r{font-size:12px;color:var(--red);font-weight:700}
+  .gd p{font-size:14px;color:var(--sub);margin-top:10px;line-height:1.65}
+
+  .follow{display:block;margin-top:44px;border:1px solid var(--ink);padding:18px;text-align:center}
+  .follow b{font-size:14px}
+  .follow span{display:block;font-size:12px;color:var(--sub);margin-top:4px}
+  footer{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--sub2);line-height:1.8;text-align:center}
+  footer nav{color:var(--sub);font-weight:700;margin-bottom:6px}
+
+  .bnav{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 4px 24px rgba(30,23,20,.13);display:flex;padding:6px;gap:2px;width:min(420px,calc(100% - 28px))}
+  .bnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;border-radius:999px;font-size:11px;font-weight:600}
+  .bnav a svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.7}
+  .bnav a.on{background:var(--pill)}
+  body.in-lib .bnav{display:none}
+
+  /* detail sheet */
+  .ov{position:fixed;inset:0;background:rgba(30,23,20,.45);display:none;z-index:80;align-items:flex-end;justify-content:center}
+  .ov.show{display:flex}
+  .sheet{background:#fff;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;border-radius:20px 20px 0 0;padding:14px 20px 30px;animation:up .2s ease}
+  @keyframes up{from{transform:translateY(40px)}to{transform:none}}
+  .grab{width:40px;height:4px;border-radius:2px;background:#ddd;margin:0 auto 18px}
+  .stop{display:flex;gap:16px}
+  .stop .poster{width:100px;height:140px}
+  .stop .poster .pt{font-size:13px}
+  .stop h2{font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-.5px}
+  .stop .rm{margin-top:8px;padding-right:0}
+  .facts{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:20px 0 6px}
+  .fact{flex:1;text-align:center;padding:12px 0}
+  .fact+.fact{border-left:1px solid var(--line)}
+  .fact b{display:block;font-size:16px}
+  .fact span{font-size:11px;color:var(--sub)}
+  .sheet h4{font-size:14px;margin:20px 0 8px}
+  .sum{font-size:14px;color:#3a3431;line-height:1.7}
+  .stores{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .store{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:13px;font-weight:700;text-align:left}
+  .store small{display:block;font-size:11px;font-weight:500;color:var(--sub);margin-top:2px}
+  .store i{font-style:normal;color:var(--red)}
+  .store.ar{grid-column:1/-1;background:var(--beige);border-color:var(--beige)}
+  .intro{display:flex;gap:12px;align-items:stretch}
+  .intro .sum{flex:1}
+  .wpack{flex:none;width:112px;border-radius:14px;background:var(--ink);color:#fff;padding:12px;display:flex;flex-direction:column;gap:4px}
+  .wpack .wp-k{font-size:11px;font-weight:700;color:#e9c46a;letter-spacing:.5px}
+  .wpack b{font-family:'Jost',sans-serif;font-size:28px;line-height:1}
+  .wpack b small{font-family:'Pretendard',sans-serif;font-size:11px;font-weight:500;margin-left:3px}
+  .wpack .wp-d{font-size:11px;color:#cfc8c2;line-height:1.4}
+  .wpack .wp-btn{margin-top:auto;font-size:12px;font-weight:700;background:var(--red);border-radius:8px;text-align:center;padding:7px 0}
+  .wp-note{font-size:11px;color:var(--sub2);margin-top:8px}
+  .plist{list-style:none;border-top:1px solid var(--line)}
+  .prow{display:flex;align-items:center;gap:10px;padding:12px 2px;border-bottom:1px solid var(--line)}
+  .prow .pn{width:96px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:6px}
+  .prow .pn em{font-style:normal;font-size:10px;font-weight:700;color:#fff;background:var(--red);border-radius:4px;padding:1px 5px}
+  .prow .pv{flex:1;font-size:15px;font-weight:700;text-align:right}
+  .prow .pq{font-size:12px;font-weight:500;color:var(--sub2)}
+  .prow .pgo{font-size:12px;font-weight:700;color:#fff;background:var(--ink);border-radius:8px;padding:8px 11px}
+  .prow.best .pv{color:var(--red)}
+  .disc{font-size:11px;color:var(--sub);background:var(--beige);border-radius:8px;padding:8px 10px;margin-bottom:8px}
+  .prow .pgo.cp{background:var(--red)}
+  .topdisc{max-width:688px;margin:0 auto;padding:6px 18px;font-size:11px;color:var(--sub);background:var(--beige)}
+  .pdate{font-size:11px;font-weight:500;color:var(--sub2);margin-left:6px}
+  .lowest{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:12px;background:var(--beige);font-size:14px;font-weight:700;margin-bottom:8px}
+  .lowest small{display:block;font-size:11px;font-weight:500;color:var(--sub);margin-top:2px}
+  .lowest i{font-style:normal;color:var(--red)}
+  .stores{grid-template-columns:repeat(4,1fr)!important}
+  .store{justify-content:center!important;gap:4px;padding:11px 6px!important}
+  .sim{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+  .sim::-webkit-scrollbar{display:none}
+  .sim .s{flex:none;width:76px;cursor:pointer}
+  .sim .s small{display:block;font-size:11px;color:var(--sub);margin-top:4px}
+  .sbtn{display:flex;gap:8px;margin-top:22px}
+  .sbtn > *{flex:1;padding:14px;border-radius:12px;font-weight:700;font-size:14px;text-align:center}
+  .b1{background:var(--beige)}
+  .b1.on{color:var(--red)}
+  .b2{background:var(--ink);color:#fff}
+  .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:10px 16px;border-radius:999px;z-index:90;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap}
+  .toast.show{opacity:1}
+
+  /* 3D library */
+  #lib{position:fixed;inset:0;z-index:50;background:var(--beige);display:none}
+  body.in-lib #lib{display:block}
+  body.in-lib{overflow:hidden}
+  #libCanvas{position:absolute;inset:0;touch-action:none}
+  #libCanvas canvas{display:block;width:100%;height:100%}
+  .lib-top{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;pointer-events:none}
+  .lib-top > *{pointer-events:auto}
+  .lib-back{background:rgba(255,255,255,.92);border-radius:999px;padding:9px 14px;font-size:13px;font-weight:700;box-shadow:0 2px 10px rgba(30,23,20,.1)}
+  .lib-title{background:rgba(255,255,255,.92);border-radius:999px;padding:9px 14px;font-size:13px;font-weight:700;box-shadow:0 2px 10px rgba(30,23,20,.1)}
+  .lib-title span{font-family:'Jost',sans-serif;letter-spacing:1.5px;margin-right:6px}
+  .lib-hint{position:absolute;left:50%;top:66px;transform:translateX(-50%);background:rgba(30,23,20,.75);color:#fff;font-size:12px;padding:7px 14px;border-radius:999px;white-space:nowrap;transition:opacity .6s}
+  .lib-bottom{position:absolute;left:0;right:0;bottom:18px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0 12px}
+  .lib-bottom button{background:rgba(255,255,255,.94);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:700;box-shadow:0 2px 10px rgba(30,23,20,.1)}
+  .lib-bottom button.on{background:var(--ink);color:#fff}
+  .lib-load{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--sub)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <a href="#books" class="logo">LIBLE<span>english</span></a>
+    <div class="hd-ic">
+      <a href="#ranking" aria-label="랭킹"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+      <a href="#guide" aria-label="메뉴"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<div class="topdisc" id="topdisc" hidden></div>
+<main class="wrap">
+
+  <section class="view" id="v-books">
+    <div class="hero">
+      <h1>영유 졸업 후,<br>뭐 읽히지?</h1>
+      <p>7–12세를 위한 챕터북·노블 TOP 100.</p>
+    </div>
+
+    <a class="feat" href="#library">
+      <div class="th" style="background:#efe4d3">
+        <svg viewBox="0 0 72 40" width="72" height="40">
+          <g id="owl"><ellipse cx="14" cy="26" rx="9" ry="10" fill="#c79a6b"/><ellipse cx="14" cy="28" rx="5.5" ry="6.5" fill="#f3e2c7"/><circle cx="10.5" cy="22" r="3.2" fill="#fff"/><circle cx="17.5" cy="22" r="3.2" fill="#fff"/><circle cx="10.8" cy="22.3" r="1.5" fill="#1e1714"/><circle cx="17.2" cy="22.3" r="1.5" fill="#1e1714"/><path d="M13 25l1 1.6 1-1.6z" fill="#e3a23c"/><path d="M7 17l2 3M21 17l-2 3" stroke="#c79a6b" stroke-width="2.4" stroke-linecap="round"/></g>
+          <use href="#owl" x="22"/><use href="#owl" x="44"/>
+        </svg>
+      </div>
+      <div class="tx"><div class="t1">리블 온라인 영어도서관</div><div class="t2">3D 도서관에서 레벨별 책장을 둘러봐요</div></div>
+      <span class="go">입장 ›</span>
+    </a>
+    <a class="feat" href="#guide">
+      <div class="th" style="background:#e9dcc8">📏</div>
+      <div class="tx"><div class="t1">AR 레벨 가이드</div><div class="t2">학년별로 어디서 시작하면 좋을까요?</div></div>
+      <span class="go">보기 ›</span>
+    </a>
+    <button class="feat" id="fToday">
+      <div class="th" id="todayTh"></div>
+      <div class="tx"><div class="t1">오늘의 원서</div><div class="t2" id="todayTx"></div></div>
+      <span class="go">▶</span>
+    </button>
+
+    <label class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="search" placeholder="책 제목, 작가, 시리즈 이름">
+    </label>
+
+    <div class="tabs" id="typeTabs"></div>
+    <div class="tabs sm" id="tagTabs"></div>
+
+    <div class="strip" id="strip"></div>
+    <a class="cal" href="#guide">레벨 가이드 보기</a>
+
+    <div class="lh">
+      <h2 id="lhTitle"></h2>
+      <div class="tgs">
+        <button id="tFav">♥ 찜한 책</button>
+        <button id="tFirst">🏅 뉴베리</button>
+        <button id="tSeries">시리즈</button>
+        <button id="tSort">랭킹 순</button>
+      </div>
+    </div>
+    <ul class="list" id="list"></ul>
+    <p class="src">※ AR 레벨과 단어 수는 엑센트 원서 읽기 사전 기준이에요. 책을 누르면 단어팩과 서점별 가격으로 바로 갈 수 있어요.</p>
+  </section>
+
+  <section class="view" id="v-ranking">
+    <h1 class="vt">원서 랭킹 TOP 100</h1>
+    <p class="vs">영유 출신 · 어학원 7–12세가 많이 읽는 챕터북·노블</p>
+    <ul class="list" id="rankList"></ul>
+  </section>
+
+  <section class="view" id="v-guide">
+    <h1 class="vt">AR 레벨 가이드</h1>
+    <p class="vs">숫자 하나로 보는 원서 난이도. 시작점 참고용이에요.</p>
+    <div id="guideBox"></div>
+  </section>
+
+  <a class="follow" href="https://accentenglish.co.kr" target="_blank" rel="noopener">
+    <b>엑센트영어도서관 레벨 상담</b>
+    <span>accentenglish.co.kr · 우리 아이 딱 맞는 원서, 선생님이 골라드려요</span>
+  </a>
+  <footer>
+    <nav>LIBLE english · liblebooks.com</nav>
+    AR 원서 리딩 · 1:1 스피킹 체크업 · Starter / Regular / Intensive<br>
+    운영 엑센트영어도서관 · accentenglish.co.kr<br>© 2026 LIBLE english. All rights reserved.
+  </footer>
+</main>
+
+<!-- 3D 도서관 -->
+<div id="lib">
+  <div id="libCanvas"><div class="lib-load" id="libLoad">도서관 문을 여는 중…</div></div>
+  <div class="lib-top">
+    <a class="lib-back" href="#books">‹ 나가기</a>
+    <div class="lib-title"><span>LIBLE</span>온라인 영어도서관</div>
+  </div>
+  <div class="lib-hint" id="libHint">드래그해서 둘러보고, 책장을 눌러보세요</div>
+  <div class="lib-bottom" id="libJump"></div>
+</div>
+
+<nav class="bnav">
+  <a href="#books" data-v="books"><svg viewBox="0 0 24 24"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/></svg>원서</a>
+  <a href="#ranking" data-v="ranking"><svg viewBox="0 0 24 24"><path d="M6 20V11M12 20V5M18 20v-6"/></svg>랭킹</a>
+  <a href="#library" data-v="library"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg>도서관</a>
+  <a href="#guide" data-v="guide"><svg viewBox="0 0 24 24"><path d="M4 20l6-14 4 8 2-4 4 10z"/></svg>레벨</a>
+  <a href="https://accentenglish.co.kr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>상담</a>
+</nav>
+
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== 랭킹 TOP 100 (순서 = 랭킹) =====
+   [사전ID, 제목, 작가, 시리즈, AR, 단어팩 단어수, 태그(|로 구분), 이모지, 소개] */
+const RAW = [
+["154","Diary of a Wimpy Kid","Jeff Kinney","Diary of a Wimpy Kid",5.2,232,"유머|학교·가족","📓","중학생이 된 그렉이 그림일기로 털어놓는 좌충우돌 학교생활. 그림이 많아 노블 입문용으로 좋아요."],
+["140","The Wild Robot","Peter Brown","The Wild Robot",5.1,391,"동물·자연|감동","🤖","무인도에 떨어진 로봇 로즈가 동물들과 함께 사는 법을 배워 가요. 챕터가 짧아 술술 읽혀요."],
+["10439ade-2c57-4c54-b076-30f8c5956274","Wonder","R. J. Palacio",null,4.8,225,"감동|학교·가족","🌟","얼굴이 남다른 어기가 처음 학교에 다니며 겪는 한 해. 친절함의 힘을 생각하게 하는 책이에요."],
+["119","Charlie and the Chocolate Factory","Roald Dahl",null,4.8,254,"판타지|유머","🍫","황금 티켓을 얻은 찰리가 신비한 웡카의 초콜릿 공장에 들어가요."],
+["124","Matilda","Roald Dahl",null,5.0,238,"유머|학교·가족","📖","책을 사랑하는 천재 소녀 마틸다가 무서운 교장 선생님에게 통쾌하게 맞서요."],
+["176","Holes","Louis Sachar",null,4.6,462,"모험·역사|추리|뉴베리","🕳️","억울하게 캠프에 끌려간 스탠리가 매일 구덩이를 파며 숨겨진 비밀을 밝혀내요. 1999 뉴베리 메달."],
+["173","Charlotte's Web","E. B. White",null,4.4,374,"동물·자연|감동|뉴베리","🕸️","돼지 윌버를 구하려는 거미 샬롯의 지혜와 우정. 세대를 넘어 읽히는 명작이에요."],
+["42","Rise of the Earth Dragon","Tracey West","Dragon Masters",3.3,77,"판타지","🐉","평범한 소년 드레이크가 용의 주인으로 뽑혀 지구 용과 짝이 돼요. 첫 챕터북 시리즈로 인기 최고."],
+["98","The 13-Storey Treehouse","Andy Griffiths","Treehouse",3.9,117,"유머","🌳","앤디와 테리가 사는 13층 나무집의 엉뚱한 소동. 그림이 많아 웃으면서 읽어요."],
+["62","Ivy + Bean","Annie Barrows","Ivy + Bean",3.4,87,"학교·가족|유머","👭","전혀 다른 두 소녀 아이비와 빈이 단짝이 되기까지. 여자아이들이 특히 좋아해요."],
+["30","Judy Moody Gets Famous!","Megan McDonald","Judy Moody",3.4,111,"학교·가족|유머","📸","유명해지고 싶은 주디 무디의 기발한 도전기. 감정 표현이 풍부한 생활 동화예요."],
+["86","I Survived the Sinking of the Titanic, 1912","Lauren Tarshis","I Survived",3.9,137,"모험·역사","🚢","타이타닉호에 탄 소년 조지의 생존기. 역사와 모험을 함께 만나요."],
+["3","Christmas in Camelot","Mary Pope Osborne","Magic Tree House: Merlin Missions",3.5,184,"판타지|모험·역사","🏰","잭과 애니가 아서왕의 카멜롯을 구하러 떠나요. 매직 트리 하우스 멀린 미션 첫 권."],
+["16","Big Nate: In a Class by Himself","Lincoln Peirce","Big Nate",3.1,168,"유머|학교·가족","✏️","운세가 좋다던 네이트의 하루가 엉망이 되는 학교 코미디. 만화 반, 글 반이에요."],
+["65","Miss Daisy Is Crazy!","Dan Gutman","My Weird School",3.5,67,"유머|학교·가족","🏫","공부 싫어하는 AJ네 반에 이상한 선생님이 왔어요. 웃음 터지는 마이 위어드 스쿨 첫 권."],
+["35","The Absent Author","Ron Roy","A to Z Mysteries",3.4,72,"추리","🔎","사라진 작가를 찾아 나선 세 친구의 추리. A to Z 미스터리 첫 권으로 추리 입문에 좋아요."],
+["150","Gangsta Granny","David Walliams",null,5.1,346,"유머|학교·가족|감동","👵","지루한 줄만 알았던 할머니가 사실은 보석 도둑?! 웃기다가 뭉클해지는 이야기."],
+["122","The BFG","Roald Dahl",null,4.8,212,"판타지|유머","🦻","꿈을 불어넣는 착한 거인과 소피가 나쁜 거인들을 막아내요. 거인의 엉뚱한 말투가 재미있어요."],
+["136","How to Train Your Dragon","Cressida Cowell","How to Train Your Dragon",5.0,141,"판타지|모험·역사","🐲","바이킹 소년 히컵이 작은 용 투슬리스를 길들이며 진짜 영웅이 돼 가요."],
+["162","The Lion, the Witch and the Wardrobe","C. S. Lewis","Narnia",5.7,180,"판타지","🦁","옷장 너머 마법의 나라 나니아에서 네 남매가 하얀 마녀에 맞서요."],
+["163","Harry Potter and the Prisoner of Azkaban","J. K. Rowling","Harry Potter",6.7,1304,"판타지","🪄","호그와트 3학년 해리 앞에 탈옥수 시리우스 블랙이 나타나요. 장편 원서 도전용."],
+["d17b1220-834d-41b7-a13e-7d5d1ffd935e","The One and Only Ivan","Katherine Applegate",null,3.6,203,"동물·자연|감동|뉴베리","🦍","쇼핑몰 우리에 갇힌 고릴라 아이반이 어린 코끼리를 위해 용기를 내요. 짧은 문장의 감동 노블."],
+["117","Fantastic Mr. Fox","Roald Dahl",null,4.1,112,"동물·자연|유머","🦊","욕심 많은 농부 셋에 맞서는 영리한 여우 가족의 대작전."],
+["129","The Field Guide","Tony DiTerlizzi & Holly Black","Spiderwick Chronicles",5.1,149,"판타지","🧚","낡은 저택에서 요정 도감을 발견한 삼남매가 보이지 않던 세계로 들어가요. 스파이더위크 첫 권."],
+["175","Number the Stars","Lois Lowry",null,4.5,212,"모험·역사|감동|뉴베리","⭐","2차 세계대전 덴마크, 안네마리가 유대인 친구를 지키려 용기를 내요. 1990 뉴베리 메달."],
+["13","Cam Jansen and the Mystery of the U.F.O.","David A. Adler","Cam Jansen",3.1,70,"추리","🛸","사진처럼 기억하는 캠이 UFO 소동의 진실을 밝혀요. 짧은 추리 챕터북."],
+["18","Rise of the Balloon Goons","Troy Cummings","The Notebook of Doom",3.0,50,"공포|유머","🎈","이상한 마을로 이사 온 알렉산더가 몬스터 노트를 들고 괴물과 싸워요. 노트북 오브 둠 첫 권."],
+["73","Superfudge","Judy Blume","Fudge",3.8,214,"학교·가족|유머","👶","말썽꾸러기 동생 퍼지 때문에 바람 잘 날 없는 피터네 가족 이야기."],
+["131","Henry Huggins","Beverly Cleary","Henry Huggins",4.7,202,"학교·가족|동물·자연","🐕","떠돌이 개 립시를 만난 헨리의 유쾌한 동네 이야기. 비벌리 클리어리의 대표작이에요."],
+["134","Ramona Quimby, Age 8","Beverly Cleary","Ramona",5.6,194,"학교·가족|뉴베리","🎒","3학년이 된 라모나의 학교와 가족 이야기. 아이 마음을 그대로 담은 1982 뉴베리 아너."],
+["57","Stanley, Flat Again!","Jeff Brown","Flat Stanley",3.4,80,"모험·역사|유머","✉️","또다시 납작해진 스탠리가 그 몸으로 사람들을 구해내는 기발한 모험."],
+["59","Lost Treasure of the Emerald Eye","Geronimo Stilton","Geronimo Stilton",3.3,134,"모험·역사|유머","🐭","겁 많은 쥐 기자 제로니모가 보물 지도를 들고 섬으로 떠나요. 알록달록한 글자가 읽는 재미를 더해요."],
+["96","The Boxcar Children","Gertrude Chandler Warner","Boxcar Children",4.0,94,"추리|학교·가족","🚃","부모를 잃은 네 남매가 숲속 화물칸에서 스스로 살아가는 이야기. 오래 사랑받는 고전이에요."],
+["111","Encyclopedia Brown Gets His Man","Donald J. Sobol","Encyclopedia Brown",4.3,123,"추리","🕵️","꼬마 탐정 브라운과 함께 사건마다 단서를 찾아 직접 풀어보는 추리책."],
+["143","Who Was Albert Einstein?","Jess Brallier","Who Was?",5.0,103,"논픽션","🧠","호기심 많던 소년이 세상을 바꾼 과학자가 되기까지. 인물 논픽션 입문용이에요."],
+["121","James and the Giant Peach","Roald Dahl",null,4.8,222,"판타지|모험·역사","🍑","거대한 복숭아를 타고 곤충 친구들과 바다를 건너는 제임스의 모험."],
+["118","The Witches","Roald Dahl",null,4.7,383,"판타지|공포","🧙","아이들을 쥐로 만들려는 마녀들에 맞선 소년과 할머니. 짜릿한 로알드 달 판타지."],
+["153","Dog Days","Jeff Kinney","Diary of a Wimpy Kid",5.0,245,"유머|학교·가족","☀️","여름방학 내내 집에서 게임만 하고 싶은 그렉의 엉망진창 방학. 윔피 키드 4권."],
+["99","The 26-Storey Treehouse","Andy Griffiths","Treehouse",4.0,112,"유머","🏴‍☠️","26층으로 늘어난 나무집에 이번엔 해적과 상어가 등장! 더 커진 소동."],
+["94","Ruby the Red Fairy","Daisy Meadows","Rainbow Magic",3.9,75,"판타지","🧚‍♀️","무지개 요정들을 구하러 떠나는 레이첼과 커스티의 첫 모험. 레인보우 매직 1권."],
+["44","Saving the Sun Dragon","Tracey West","Dragon Masters",3.4,65,"판타지","🌞","드레이크와 친구들이 위험에 빠진 태양 용을 구하러 떠나요. 드래곤 마스터즈 2권."],
+["81","I Survived the Shark Attacks of 1916","Lauren Tarshis","I Survived",3.8,122,"모험·역사","🦈","상어가 나타난 마을에 사는 소년 쳇의 생존기. 실제 사건을 바탕으로 했어요."],
+["179","Tuck Everlasting","Natalie Babbitt",null,5.0,307,"판타지|감동","🌲","영원히 사는 터크 가족을 만난 위니가 삶과 시간에 대해 고민해요."],
+["181","The Giver","Lois Lowry",null,5.7,289,"감동|뉴베리","🍎","감정도 기억도 통제된 마을에서 '기억 전달자'로 뽑힌 조너스. 1994 뉴베리 메달."],
+["36abfbf5-a5c8-4cd9-b218-1c0e13a73a94","Fish in a Tree","Lynda Mullaly Hunt",null,3.7,104,"감동|학교·가족","🐟","글 읽기가 어려운 앨리가 좋은 선생님을 만나 자신감을 찾아가요."],
+["87a452e4-05d0-440f-8ba6-f78bfa55072e","Out of My Mind","Sharon M. Draper",null,4.3,171,"감동|학교·가족","💬","말은 못 하지만 누구보다 똑똑한 멜로디가 세상에 자기 목소리를 내요."],
+["177","Dear Mr. Henshaw","Beverly Cleary",null,4.9,126,"학교·가족|감동|뉴베리","✍️","좋아하는 작가에게 편지를 쓰며 자라는 소년 리. 편지와 일기 형식의 1984 뉴베리 메달."],
+["172","Stone Fox","John Reynolds Gardiner",null,4.1,54,"동물·자연|감동","🛷","할아버지의 농장을 지키려 개썰매 경주에 나선 윌리. 짧지만 여운이 깊어요."],
+["108","The Tiger Rising","Kate DiCamillo",null,3.6,145,"감동|동물·자연","🐅","숲에서 우리에 갇힌 호랑이를 발견한 롭이 마음속 슬픔을 마주해요."],
+["109","The Magician's Elephant","Kate DiCamillo",null,4.8,204,"판타지|감동","🐘","하늘에서 떨어진 코끼리가 고아 소년 피터의 운명을 바꿔요."],
+["28","Revenge of the Living Dummy","R. L. Stine","Goosebumps",3.4,152,"공포","🎭","복화술 인형이 살아 움직인다?! 오싹하지만 끝까지 읽게 되는 구스범스."],
+["27","One Day at HorrorLand","R. L. Stine","Goosebumps",3.4,177,"공포","🎢","놀이공원 호러랜드에 갇힌 가족의 공포 탈출기. 구스범스 인기작이에요."],
+["32","Judy Moody Saves the World!","Megan McDonald","Judy Moody",3.4,120,"학교·가족|동물·자연","🌍","환경을 지키겠다며 온 동네를 들썩이게 하는 주디의 이야기."],
+["64","Ivy + Bean and the Ghost That Had to Go","Annie Barrows","Ivy + Bean",3.6,77,"학교·가족|공포","👻","학교 화장실에 유령이 산다고? 아이비와 빈의 유령 퇴치 작전."],
+["70","Mrs. Roopy Is Loopy!","Dan Gutman","My Weird School",3.6,73,"유머|학교·가족","📚","도서관 선생님이 매일 다른 인물로 변신한다? 마이 위어드 스쿨."],
+["71","Ms. Hannah Is Bananas!","Dan Gutman","My Weird School",3.6,73,"유머|학교·가족","🎨","미술 선생님의 기상천외한 수업. 마이 위어드 스쿨."],
+["33","The Bald Bandit","Ron Roy","A to Z Mysteries",3.2,77,"추리","🏦","은행 강도를 목격한 세 친구가 범인을 찾아 나서요. A to Z 미스터리 B권."],
+["40","The Haunted Hotel","Ron Roy","A to Z Mysteries",3.5,64,"추리|공포","🏨","유령이 나온다는 호텔의 비밀을 파헤쳐요. A to Z 미스터리 H권."],
+["43","Power of the Fire Dragon","Tracey West","Dragon Masters",3.4,69,"판타지","🔥","불의 용을 찾아 떠나는 드래곤 마스터즈 4권."],
+["49","Secret of the Water Dragon","Tracey West","Dragon Masters",3.5,69,"판타지","🌊","물의 용과 함께 바다로 떠나는 드래곤 마스터즈 3권."],
+["4","Haunted Castle on Hallows Eve","Mary Pope Osborne","Magic Tree House: Merlin Missions",3.5,139,"판타지|공포","🎃","할로윈 밤, 잭과 애니가 유령 성의 수수께끼를 풀어요. 멀린 미션 2권."],
+["5","Summer of the Sea Serpent","Mary Pope Osborne","Magic Tree House: Merlin Missions",4.0,131,"판타지|모험·역사","🐍","바다 괴물이 사는 곳으로 마법 검을 찾으러 가요. 멀린 미션 3권."],
+["0","Polar Bears Past Bedtime","Mary Pope Osborne","Magic Tree House",3.0,75,"모험·역사|동물·자연","🐻‍❄️","북극으로 간 잭과 애니가 아기 북극곰을 만나요. 매직 트리 하우스 12권."],
+["1","Vacation Under the Volcano","Mary Pope Osborne","Magic Tree House",3.1,73,"모험·역사","🌋","폼페이에서 화산 폭발 직전의 하루를 보내요. 매직 트리 하우스 13권."],
+["15","Big Nate Strikes Again","Lincoln Peirce","Big Nate",3.1,182,"유머|학교·가족","📝","과제 짝꿍이 하필 앙숙 지나라니! 빅 네이트 2권."],
+["10","Cam Jansen and the Chocolate Fudge Mystery","David A. Adler","Cam Jansen",3.1,62,"추리","🍬","캠과 에릭이 수상한 사람과 사라진 돈의 행방을 쫓아요."],
+["58","Stanley in Space","Jeff Brown","Flat Stanley",3.8,121,"모험·역사|유머","🚀","납작이 스탠리 가족이 우주로! 외계인을 만나는 모험."],
+["61","The Curse of the Cheese Pyramid","Geronimo Stilton","Geronimo Stilton",3.6,134,"모험·역사|유머","🧀","제로니모가 이집트 치즈 피라미드의 저주를 취재하러 가요."],
+["83","I Survived the Bombing of Pearl Harbor, 1941","Lauren Tarshis","I Survived",3.9,132,"모험·역사","✈️","진주만 공습 날 하와이에 있던 소년 대니의 생존기."],
+["77","I Survived the Attacks of September 11, 2001","Lauren Tarshis","I Survived",3.7,111,"모험·역사","🚒","소방관 삼촌을 둔 소년 루카스가 겪은 2001년 9월 11일."],
+["88","I Survived the Great Chicago Fire, 1871","Lauren Tarshis","I Survived",4.0,153,"모험·역사","🔥","1871년 시카고 대화재 속 소년 올리버의 생존기."],
+["74","Fudge-a-Mania","Judy Blume","Fudge",3.9,176,"학교·가족|유머","🏖️","여름휴가에서도 계속되는 퍼지의 대소동."],
+["133","Ramona and Her Father","Beverly Cleary","Ramona",5.2,180,"학교·가족|감동|뉴베리","👨‍👧","아빠가 직장을 잃자 가족을 돕고 싶은 라모나. 1978 뉴베리 아너."],
+["130","Henry and Ribsy","Beverly Cleary","Henry Huggins",4.6,190,"학교·가족|동물·자연","🎣","립시가 말썽을 피우면 아빠와 낚시를 못 간다! 헨리의 고군분투."],
+["132","Ralph S. Mouse","Beverly Cleary","Ralph S. Mouse",5.0,189,"동물·자연|모험·역사","🏍️","오토바이 타는 생쥐 랄프가 학교에 가면서 벌어지는 소동."],
+["116","George's Marvelous Medicine","Roald Dahl",null,4.0,105,"유머|판타지","🧪","심술쟁이 할머니를 위해 조지가 만든 약이 엄청난 일을 벌여요."],
+["113","The Enormous Crocodile","Roald Dahl",null,3.9,40,"유머|동물·자연","🐊","아이들을 노리는 악어의 꾀를 동물 친구들이 막아내요. 로알드 달 입문용."],
+["120","Charlie and the Great Glass Elevator","Roald Dahl",null,4.8,146,"판타지|유머","🛗","유리 엘리베이터를 타고 우주로 날아간 찰리와 웡카의 후속 모험."],
+["115","Esio Trot","Roald Dahl",null,4.0,57,"유머|동물·자연","🐢","거북이를 이용한 호피 씨의 귀여운 사랑 작전. 짧은 로알드 달 작품."],
+["151","Mr. Stink","David Walliams",null,5.2,357,"유머|감동","🧦","냄새나는 노숙인 아저씨를 몰래 창고에 숨겨 준 소녀 클로이의 이야기."],
+["152","Demon Dentist","David Walliams",null,5.6,469,"유머|공포","🦷","마을 아이들의 이를 노리는 수상한 치과 의사의 정체는? 오싹하고 웃긴 이야기."],
+["149","Bad Dad","David Walliams",null,5.0,410,"유머|학교·가족","🏎️","감옥에 간 아빠를 구하려는 소년 프랭크의 대모험. 가족애가 뭉클해요."],
+["138","The Wild Robot Escapes","Peter Brown","The Wild Robot",5.0,394,"동물·자연|감동","🚜","농장으로 간 로즈가 섬의 가족에게 돌아가려는 여정. 와일드 로봇 2권."],
+["139","The Wild Robot Protects","Peter Brown","The Wild Robot",5.0,396,"동물·자연|감동","🌊","오염된 바다로부터 섬을 지키려는 로즈의 모험. 와일드 로봇 3권."],
+["155","The Last Straw","Jeff Kinney","Diary of a Wimpy Kid",5.3,263,"유머|학교·가족","❄️","새해 결심을 지키기 어려운 그렉의 겨울 이야기. 윔피 키드 3권."],
+["156","The Ugly Truth","Jeff Kinney","Diary of a Wimpy Kid",5.4,244,"유머|학교·가족","😬","친구와 멀어지고 사춘기가 다가오는 그렉의 고민. 윔피 키드 5권."],
+["100","The 39-Storey Treehouse","Andy Griffiths","Treehouse",4.0,151,"유머","⚙️","39층 나무집에 생긴 발명품 때문에 벌어지는 엉뚱한 소동."],
+["135","How to Be a Pirate","Cressida Cowell","How to Train Your Dragon",5.0,129,"판타지|모험·역사","⚓","해적 훈련을 하던 히컵이 보물과 위험을 동시에 만나요. 드래곤 길들이기 2권."],
+["126","The Seeing Stone","Tony DiTerlizzi & Holly Black","Spiderwick Chronicles",4.6,124,"판타지","🔮","사라진 동생을 구하러 고블린 세계로 들어가는 스파이더위크 2권."],
+["160","A Grimm Warning","Chris Colfer","The Land of Stories",5.6,566,"판타지|모험·역사","📕","동화 나라에 군대가 쳐들어온다! 쌍둥이의 동화 세계 모험 3권."],
+["159","The Enchantress Returns","Chris Colfer","The Land of Stories",5.5,782,"판타지","👑","동화 나라에 돌아온 마녀에 맞서는 쌍둥이. 랜드 오브 스토리즈 2권."],
+["161","The Magician's Nephew","C. S. Lewis","Narnia",5.4,135,"판타지","💍","나니아가 처음 만들어지는 순간을 목격하는 디고리와 폴리."],
+["144","Who Was Anne Frank?","Ann Abramson","Who Was?",5.0,92,"논픽션|모험·역사","📔","은신처에서 일기를 쓴 소녀 안네의 삶을 알기 쉽게 정리했어요."],
+["141","Who Was Helen Keller?","Gare Thompson","Who Was?",4.3,104,"논픽션|감동","✋","보지도 듣지도 못했던 헬렌이 세상과 소통하기까지의 이야기."],
+["157","Pippi Goes on Board","Astrid Lindgren","Pippi",5.2,221,"유머|모험·역사","🧦","세상에서 가장 힘센 소녀 삐삐의 엉뚱 발랄한 일상."],
+["7c19b502-b2bd-41d5-a874-42b9620ae37d","Harriet the Spy","Louise Fitzhugh",null,4.5,213,"학교·가족|추리","🗒️","스파이가 되고 싶은 해리엇의 비밀 노트가 친구들에게 들키면서 생기는 일."],
+["171","Jake Drake, Bully Buster","Andrew Clements","Jake Drake",4.1,95,"학교·가족","🛡️","괴롭힘 대장에게 맞서는 제이크의 지혜로운 해결법."],
+["180","The Landry News","Andrew Clements",null,5.3,152,"학교·가족|감동","📰","교실 신문을 만든 카라가 진실과 배려 사이에서 고민해요."],
+["178","No Talking","Andrew Clements",null,4.9,143,"학교·가족|유머","🤐","남자아이 대 여자아이, 이틀 동안 말 안 하기 대결!"],
+["75","Blubber","Judy Blume",null,4.0,173,"학교·가족|감동","💭","반 친구를 놀리는 분위기 속에서 질이 겪는 고민. 따돌림을 다룬 이야기."]
+];
+
+const DICT = "https://accent-reading-dictionary.vercel.app/";
+const ageOf = lv => lv<3.5?"7–8세":lv<4.0?"8–9세":lv<4.7?"9–10세":lv<5.3?"10–11세":"11–12세";
+const BOOKS = RAW.map((r,i)=>({id:r[0], t:r[1], a:r[2], series:r[3], lv:r[4], words:r[5], tags:r[6].split("|"), e:r[7], s:r[8], rank:i+1,
+  type: r[6].includes("논픽션") ? "논픽션" : (r[4]<4.0 ? "챕터북" : "노블"), grade: ageOf(r[4])}));
+
+/* 최저가 비교 · 서점 연결 */
+const q = t => encodeURIComponent(t);
+/* 서점별 가격: PRICES["책 사전ID"] = {"쿠팡":9800, "알라딘":10500, ...}  (원 단위 숫자) */
+const PRICE_DATE = "";
+/* 쿠팡 파트너스 링크: COUPANG_LINKS["책 사전ID"] = "https://link.coupang.com/a/....." */
+const COUPANG_LINKS = {};
+const HAS_PARTNERS = Object.keys(COUPANG_LINKS).length > 0;
+const DISCLOSURE = "이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.";
+const PRICES = {};
+function priceRows(b){
+  const p = PRICES[b.id] || {};
+  const vals = Object.values(p).filter(v=>v>0);
+  const min = vals.length ? Math.min(...vals) : null;
+  const list = STORES.map(s=>({s, v:p[s.n]||0})).sort((x,y)=> (x.v||1e9)-(y.v||1e9) || (x.s.n==="쿠팡"?-1:y.s.n==="쿠팡"?1:0));
+  return list.map(({s,v})=>`<li class="prow ${v&&v===min?'best':''}">
+    <span class="pn">${s.n}${v&&v===min?'<em>최저가</em>':''}</span>
+    <span class="pv">${v? v.toLocaleString('ko-KR')+'원' : '<span class="pq">가격 준비 중</span>'}</span>
+    <a class="pgo ${s.n==='쿠팡'?'cp':''}" href="${(s.n==='쿠팡' && COUPANG_LINKS[b.id]) || s.u(b.t)}" target="_blank" rel="noopener sponsored">사러가기 ›</a></li>`).join("");
+}
+const STORES = [
+  {n:"쿠팡", u:t=>"https://www.coupang.com/np/search?q="+q(t+" 원서")},
+  {n:"알라딘", u:t=>"https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=Foreign&SearchWord="+q(t)},
+  {n:"예스24", u:t=>"https://www.yes24.com/Product/Search?domain=FOREIGN&query="+q(t)},
+  {n:"교보문고", u:t=>"https://search.kyobobook.co.kr/search?keyword="+q(t)},
+  {n:"웬디북", u:t=>"https://www.wendybook.com/search/result?term="+q(t)},
+  {n:"세종북스", u:t=>"https://search.naver.com/search.naver?query="+q("세종북스 "+t)},
+  {n:"동방북스", u:t=>"https://search.naver.com/search.naver?query="+q("동방북스 "+t)}
+];
+
+const LEVELS = [
+  {k:"all", top:"전체", n:"All", min:0, max:99},
+  {k:"30", top:"7–8세", n:"3.0", min:3.0, max:3.49},
+  {k:"35", top:"8–9세", n:"3.5", min:3.5, max:3.99},
+  {k:"40", top:"9–10세", n:"4.0", min:4.0, max:4.69},
+  {k:"47", top:"10–11세", n:"4.7", min:4.7, max:5.29},
+  {k:"53", top:"11–12세", n:"5.3+", min:5.3, max:99}
+];
+const GUIDE = [
+  {n:"3.0", h:"AR 3.0–3.4 · 첫 챕터북", r:"7–8세 · 영유 졸업 직후", p:"그림이 섞인 짧은 챕터북으로 '줄글책' 습관을 들이는 단계. Dragon Masters, A to Z Mysteries, Big Nate처럼 시리즈로 쭉 이어 읽기 좋아요."},
+  {n:"3.5", h:"AR 3.5–3.9 · 챕터북 다독", r:"8–9세", p:"인물과 사건이 풍부해져요. I Survived, Treehouse, Rainbow Magic 같은 시리즈로 양을 늘리는 구간이에요."},
+  {n:"4.0", h:"AR 4.0–4.6 · 노블 입문", r:"9–10세", p:"그림이 거의 없는 소설로 넘어가요. Roald Dahl 단편, Charlotte's Web, Holes처럼 이야기 자체가 재미있는 책부터 시작하세요."},
+  {n:"4.7", h:"AR 4.7–5.2 · 노블 확장", r:"10–11세", p:"Wonder, The Wild Robot, Diary of a Wimpy Kid처럼 학교·성장 이야기가 많아요. 뉴베리 수상작에 도전하기 좋은 시기예요."},
+  {n:"5.3", h:"AR 5.3 이상 · 장편 도전", r:"11–12세", p:"Narnia, The Giver, Harry Potter 같은 장편. 단어팩으로 어려운 단어를 미리 익히면 훨씬 수월해요."}
+];
+const PAL = {"챕터북":["#5a9f8f","#2f7466"],"노블":["#3d4552","#1f2530"],"논픽션":["#c9874a","#9a5a2a"]};
+const grad = b => { const c = PAL[b.type]||["#888","#555"]; return `linear-gradient(160deg,${c[0]},${c[1]})`; };
+const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const HEART = '<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>';
+
+let favs = new Set();
+try { favs = new Set(JSON.parse(localStorage.getItem("lible-favs")||"[]")); } catch(e){}
+const saveFavs = () => { try { localStorage.setItem("lible-favs", JSON.stringify([...favs])); } catch(e){} };
+const st = {q:"", type:"전체", tag:"전체 주제", lv:"all", fav:false, first:false, series:false, sort:0};
+const SORTS = ["랭킹 순","레벨 낮은 순","레벨 높은 순"];
+const TYPES = ["전체","챕터북","노블","논픽션"];
+const TAGS = ["전체 주제", ...[...new Set(BOOKS.flatMap(b=>b.tags))]];
+
+function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(toast.h); toast.h=setTimeout(()=>t.classList.remove("show"),1800); }
+function tabs(el, arr, key){
+  el.innerHTML = arr.map(v=>`<button class="tab ${st[key]===v?'on':''}" data-v="${esc(v)}">${esc(v)}</button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{st[key]=b.dataset.v; tabs(el,arr,key); render();});
+}
+function strip(){
+  const el = document.getElementById("strip");
+  el.innerHTML = LEVELS.map(l=>`<button class="dy ${st.lv===l.k?'on':''}" data-k="${l.k}"><small>${l.top}</small><b>${l.n}</b></button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{st.lv=b.dataset.k; strip(); render();});
+}
+const poster = b => `<div class="poster" style="background:${grad(b)}"><div class="pt">${esc(b.t)}</div><div class="pe">${b.e}</div></div>`;
+function row(b, rank){
+  return `<li class="row ${rank?'rk':''}" data-t="${esc(b.t)}">
+    ${rank?`<span class="n">${rank}</span>`:''}${poster(b)}
+    <div class="rbody">
+      <div class="rtop"><h3>${esc(b.t)}</h3></div>
+      <div class="ract"><button class="heart ${favs.has(b.t)?'on':''}" data-fav="${esc(b.t)}" aria-label="찜하기">${HEART}</button><span class="lk">자세히</span></div>
+      <p class="rm">${esc(b.a)}${b.series?` · ${esc(b.series)}`:''}<br>AR ${b.lv.toFixed(1)} · ${esc(b.type)} · ${esc(b.grade)}</p>
+      <span class="box">단어팩 ${b.words}</span>${b.tags.includes('뉴베리')?'<span class="box">뉴베리</span>':''}
+    </div></li>`;
+}
+function bind(root){
+  root.querySelectorAll("[data-fav]").forEach(h=>h.onclick=e=>{e.stopPropagation(); toggleFav(h.dataset.fav);});
+  root.querySelectorAll(".row").forEach(r=>r.onclick=()=>openBook(r.dataset.t));
+}
+function filtered(){
+  const L = LEVELS.find(l=>l.k===st.lv), q = st.q.trim().toLowerCase();
+  let r = BOOKS.filter(b=> b.lv>=L.min && b.lv<=L.max &&
+    (st.type==="전체"||b.type===st.type) && (st.tag==="전체 주제"||b.tags.includes(st.tag)) &&
+    (!st.fav||favs.has(b.t)) && (!st.first||b.tags.includes('뉴베리')) && (!st.series||b.series) &&
+    (!q || (b.t+" "+b.a+" "+(b.series||"")).toLowerCase().includes(q)));
+  r.sort((x,y)=> st.sort===0? x.rank-y.rank : st.sort===1? x.lv-y.lv : y.lv-x.lv);
+  return r;
+}
+function render(){
+  const r = filtered(), L = LEVELS.find(l=>l.k===st.lv);
+  document.getElementById("lhTitle").textContent = `${st.lv==="all"?"TOP 100 전체":"AR "+L.n+" · "+L.top} ${r.length}권`;
+  const el = document.getElementById("list");
+  el.innerHTML = r.length? r.map(b=>row(b)).join("") : `<li class="empty">조건에 맞는 책이 없어요.</li>`;
+  bind(el);
+  ["tFav","tFirst","tSeries"].forEach((id,i)=>document.getElementById(id).classList.toggle("on",[st.fav,st.first,st.series][i]));
+  document.getElementById("tSort").textContent = SORTS[st.sort];
+  const rk = document.getElementById("rankList");
+  rk.innerHTML = BOOKS.map(b=>row(b, b.rank)).join(""); bind(rk);
+}
+function toggleFav(t){
+  favs.has(t)? favs.delete(t) : favs.add(t); saveFavs(); render();
+  if(sheetMode==="book" && document.getElementById("ov").classList.contains("show")) openBook(t);
+}
+
+/* ===== 상세 시트 ===== */
+let sheetMode = null;
+function openBook(t){
+  const b = BOOKS.find(x=>x.t===t); if(!b) return;
+  sheetMode = "book";
+  const sim = BOOKS.filter(x=>x.t!==b.t && Math.abs(x.lv-b.lv)<=0.6).slice(0,8);
+  document.getElementById("sheet").innerHTML = `
+    <div class="grab"></div>
+    <div class="stop">${poster(b)}
+      <div><h2>${esc(b.t)}</h2><p class="rm">${esc(b.a)}${b.series?`<br>${esc(b.series)} 시리즈`:''}</p>
+      ${b.tags.map(x=>`<span class="box">${esc(x)}</span>`).join("")}</div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>${b.lv.toFixed(1)}</b><span>AR 레벨</span></div>
+      <div class="fact"><b>${esc(b.grade)}</b><span>추천 나이</span></div>
+      <div class="fact"><b>${b.words}개</b><span>단어팩 단어</span></div>
+    </div>
+    <h4>어떤 책인가요?</h4>
+    <div class="intro">
+      <p class="sum">${esc(b.s)}</p>
+      <a class="wpack" href="${DICT}#book/${encodeURIComponent(b.id)}" target="_blank" rel="noopener">
+        <span class="wp-k">단어팩</span>
+        <b>${b.words}<small>단어</small></b>
+        <span class="wp-d">뜻·예문·발음<br>카드 학습</span>
+        <span class="wp-btn">구매하기 ›</span>
+      </a>
+    </div>
+    <p class="wp-note">평생 이용권 9,900원 · 지금은 무료 공개 중 · 엑센트 원서 읽기 사전에서 열려요</p>
+    <h4>서점별 가격 <small class="pdate">${PRICE_DATE?PRICE_DATE+' 기준':''}</small></h4>
+    ${HAS_PARTNERS?`<p class="disc">${DISCLOSURE}</p>`:''}
+    <ul class="plist">${priceRows(b)}</ul>
+    ${sim.length?`<h4>비슷한 레벨의 책</h4><div class="sim">${sim.map(x=>`<div class="s" data-t="${esc(x.t)}">${poster(x)}<small>AR ${x.lv.toFixed(1)}</small></div>`).join("")}</div>`:''}
+    <div class="sbtn">
+      <button class="b1 ${favs.has(b.t)?'on':''}" id="sFav">${favs.has(b.t)?'♥ 찜 완료':'♡ 찜하기'}</button>
+      <a class="b2" href="https://accentenglish.co.kr" target="_blank" rel="noopener">이 책으로 상담하기</a>
+    </div>`;
+  showSheet();
+  document.getElementById("sFav").onclick = ()=>toggleFav(b.t);
+  document.querySelectorAll(".sim .s").forEach(s=>s.onclick=()=>openBook(s.dataset.t));
+}
+function openShelf(k){
+  const L = LEVELS.find(l=>l.k===k);
+  const books = BOOKS.filter(b=>b.lv>=L.min && b.lv<=L.max).sort((x,y)=>x.lv-y.lv);
+  sheetMode = "shelf";
+  document.getElementById("sheet").innerHTML = `<div class="grab"></div>
+    <h2 style="font-size:20px;font-weight:700">AR ${L.n} 책장 <span style="color:var(--sub);font-weight:500;font-size:14px">· ${L.top} · ${books.length}권</span></h2>
+    <ul class="list" style="margin-top:8px">${books.map(b=>row(b)).join("")}</ul>`;
+  bind(document.getElementById("sheet"));
+  showSheet();
+}
+function showSheet(){ document.getElementById("ov").classList.add("show"); document.getElementById("sheet").scrollTop = 0; }
+const closeSheet = ()=>{ document.getElementById("ov").classList.remove("show"); sheetMode=null; };
+document.getElementById("ov").onclick = e=>{ if(e.target.id==="ov") closeSheet(); };
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeSheet(); });
+
+/* ===== 화면 전환 ===== */
+function route(){
+  const h = location.hash.slice(1);
+  const v = ["books","ranking","guide","library"].includes(h) ? h : "books";
+  document.body.classList.toggle("in-lib", v==="library");
+  if(v==="library"){ enterLibrary(); } else { leaveLibrary(); }
+  if(v!=="library") document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.id==="v-"+v));
+  document.querySelectorAll(".bnav a[data-v]").forEach(a=>a.classList.toggle("on", a.dataset.v===v));
+  window.scrollTo({top:0,behavior:'instant'});
+}
+window.addEventListener("hashchange", route);
+
+/* ===== 3D 온라인 도서관 ===== */
+const SHELVES = LEVELS.filter(l=>l.k!=="all");
+const SHELF_COLORS = {"30":["#e07a5f","#f2cc8f","#81b29a","#3d405b"],"35":["#5a9f8f","#8cc4b4","#2f7466","#f0c36d"],"40":["#5a7fc9","#9db4e6","#34508f","#f0c36d"],"47":["#7a5a9e","#b9a3d6","#c9474a","#f2d0a9"],"53":["#3d4552","#8a6f5a","#b5172b","#d8cbb8"],"0":["#e3a04a","#f2c879","#c8613e","#f0dcb0"],"1":["#5a9f8f","#8cc4b4","#2f7466","#d9ece4"],"2":["#e07a5f","#f2cc8f","#81b29a","#3d405b"],"3":["#5a7fc9","#9db4e6","#34508f","#f0c36d"],"4":["#7a5a9e","#b9a3d6","#c9474a","#f2d0a9"],"5":["#3d4552","#8a6f5a","#b5172b","#d8cbb8"]};
+const lib = {ready:false, running:false};
+function enterLibrary(){
+  if(lib.ready){ lib.running=true; lib.loop(); return; }
+  if(lib.loading) return;
+  lib.loading = true;
+  const s = document.createElement("script");
+  s.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  s.onload = ()=>{ (document.fonts? document.fonts.ready : Promise.resolve()).then(initLibrary); };
+  s.onerror = ()=>{ document.getElementById("libLoad").textContent = "도서관을 불러오지 못했어요. 새로고침해 주세요."; };
+  document.head.appendChild(s);
+}
+function leaveLibrary(){ lib.running=false; }
+
+function labelTexture(top, bottom){
+  const c = document.createElement("canvas"); c.width=512; c.height=160;
+  const g = c.getContext("2d");
+  g.fillStyle="#fffaf2"; roundRect(g,4,4,504,152,40); g.fill();
+  g.strokeStyle="#1e1714"; g.lineWidth=5; roundRect(g,4,4,504,152,40); g.stroke();
+  g.fillStyle="#1e1714"; g.textAlign="center";
+  g.font="800 62px Pretendard, sans-serif"; g.fillText(top,256,78);
+  g.fillStyle="#b5172b"; g.font="700 36px Pretendard, sans-serif"; g.fillText(bottom,256,128);
+  const t = new THREE.CanvasTexture(c); t.anisotropy=4; return t;
+}
+function roundRect(g,x,y,w,h,r){ g.beginPath(); g.moveTo(x+r,y); g.arcTo(x+w,y,x+w,y+h,r); g.arcTo(x+w,y+h,x,y+h,r); g.arcTo(x,y+h,x,y,r); g.arcTo(x,y,x+w,y,r); g.closePath(); }
+
+function initLibrary(){
+  const T = THREE, box = document.getElementById("libCanvas");
+  document.getElementById("libLoad").remove();
+  const renderer = new T.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
+  box.appendChild(renderer.domElement);
+  const scene = new T.Scene();
+  scene.background = new T.Color("#f6f1ea");
+  scene.fog = new T.Fog("#f6f1ea", 16, 30);
+  const camera = new T.PerspectiveCamera(58, 1, 0.1, 100);
+
+  scene.add(new T.HemisphereLight(0xfff7ea, 0xb39a7c, 0.62));
+  const sun = new T.DirectionalLight(0xfff0d8, 0.45); sun.position.set(4,10,6); scene.add(sun);
+
+  const mat = c => new T.MeshLambertMaterial({color:c});
+  const floor = new T.Mesh(new T.CircleGeometry(15, 64), mat("#d8b48a")); floor.rotation.x=-Math.PI/2; scene.add(floor);
+  const rug = new T.Mesh(new T.CircleGeometry(3.4, 48), mat("#e6d5bb")); rug.rotation.x=-Math.PI/2; rug.position.y=0.01; scene.add(rug);
+  const rug2 = new T.Mesh(new T.RingGeometry(3.0, 3.25, 48), mat("#b5172b")); rug2.rotation.x=-Math.PI/2; rug2.position.y=0.02; scene.add(rug2);
+  const wall = new T.Mesh(new T.CylinderGeometry(15, 15, 8, 64, 1, true), new T.MeshLambertMaterial({color:"#efe5d6", side:T.BackSide})); wall.position.y=4; scene.add(wall);
+  const ceilRing = new T.Mesh(new T.TorusGeometry(6, 0.08, 8, 64), mat("#1e1714")); ceilRing.rotation.x=Math.PI/2; ceilRing.position.y=6.5; scene.add(ceilRing);
+
+  const pick = [];
+  const R = 9.5;
+  SHELVES.forEach((L, i)=>{
+    const ang = i * (Math.PI*2/SHELVES.length);
+    const g = new T.Group();
+    g.position.set(Math.sin(ang)*R, 0, Math.cos(ang)*R);
+    g.lookAt(0,0,0);
+    g.userData.level = L.k; g.userData.ang = ang;
+    const wood = mat("#8a5a3b"), woodD = mat("#6e4529");
+    const back = new T.Mesh(new T.BoxGeometry(3.6, 4.4, 0.25), woodD); back.position.set(0,2.2,-0.3); g.add(back);
+    [-1.8, 1.8].forEach(x=>{ const side=new T.Mesh(new T.BoxGeometry(0.14,4.4,0.8), wood); side.position.set(x,2.2,0); g.add(side); });
+    const cols = SHELF_COLORS[L.k];
+    for(let r=0;r<4;r++){
+      const y = 0.25 + r*1.05;
+      const plank = new T.Mesh(new T.BoxGeometry(3.6,0.1,0.8), wood); plank.position.set(0,y,0); g.add(plank);
+      let x = -1.65;
+      let n = 0;
+      while(x < 1.55){
+        const w = 0.1 + ((i*7+r*13+n*5)%7)*0.022, h = 0.55 + ((i*3+r*11+n*7)%5)*0.07;
+        const bk = new T.Mesh(new T.BoxGeometry(w, h, 0.5), mat(cols[(n+r+i)%cols.length]));
+        const lean = (n%9===4) ? 0.18 : 0;
+        bk.position.set(x + w/2, y + 0.05 + h/2, 0.05); bk.rotation.z = lean;
+        g.add(bk); x += w + 0.015 + (lean?0.12:0); n++;
+      }
+    }
+    const sign = new T.Mesh(new T.PlaneGeometry(2.4, 0.75), new T.MeshBasicMaterial({map:labelTexture(`AR ${L.n}`, L.top), transparent:true}));
+    sign.position.set(0, 4.95, 0.1); g.add(sign);
+    g.traverse(o=>{ if(o.isMesh) pick.push(o); });
+    scene.add(g);
+  });
+
+  // 가운데 독서 테이블 + 오늘의 원서
+  const center = new T.Group(); center.userData.today = true;
+  const top = new T.Mesh(new T.CylinderGeometry(1.25,1.25,0.12,40), mat("#8a5a3b")); top.position.y=0.95; center.add(top);
+  const leg = new T.Mesh(new T.CylinderGeometry(0.16,0.3,0.9,16), mat("#6e4529")); leg.position.y=0.45; center.add(leg);
+  const pageMat = new T.MeshLambertMaterial({color:"#fffaf0", emissive:"#ffe9b8", emissiveIntensity:0.35});
+  const p1 = new T.Mesh(new T.BoxGeometry(0.62,0.04,0.82), pageMat); p1.position.set(-0.31,1.08,0); p1.rotation.z=0.12; center.add(p1);
+  const p2 = p1.clone(); p2.position.x=0.31; p2.rotation.z=-0.12; center.add(p2);
+  const cover = new T.Mesh(new T.BoxGeometry(1.32,0.03,0.88), mat("#b5172b")); cover.position.y=1.03; center.add(cover);
+  const glow = new T.PointLight(0xffd79a, 0.9, 6); glow.position.set(0,2.2,0); center.add(glow);
+  const tSign = new T.Mesh(new T.PlaneGeometry(1.35,0.42), new T.MeshBasicMaterial({map:labelTexture("오늘의 원서","눌러서 열기"), transparent:true, side:T.DoubleSide}));
+  tSign.position.set(0,1.75,0); center.add(tSign);
+  center.traverse(o=>{ if(o.isMesh) pick.push(o); });
+  scene.add(center);
+
+  // 책 읽는 부엉이 친구들
+  const owls = [];
+  function makeOwl(color){
+    const o = new T.Group();
+    const body = new T.Mesh(new T.SphereGeometry(0.32, 20, 16), mat(color)); body.scale.set(1,1.15,0.95); body.position.y=0.36; o.add(body);
+    const belly = new T.Mesh(new T.SphereGeometry(0.22, 16, 12), mat("#f3e2c7")); belly.position.set(0,0.3,0.16); belly.scale.set(1,1.1,0.6); o.add(belly);
+    [-0.12,0.12].forEach(x=>{
+      const eye = new T.Mesh(new T.SphereGeometry(0.09, 12, 10), mat("#ffffff")); eye.position.set(x,0.5,0.25); o.add(eye);
+      const pu = new T.Mesh(new T.SphereGeometry(0.045, 10, 8), mat("#1e1714")); pu.position.set(x,0.5,0.33); o.add(pu);
+      const ear = new T.Mesh(new T.ConeGeometry(0.07,0.18,8), mat(color)); ear.position.set(x*1.6,0.72,0); ear.rotation.z = x>0?-0.4:0.4; o.add(ear);
+    });
+    const beak = new T.Mesh(new T.ConeGeometry(0.04,0.09,8), mat("#e3a23c")); beak.position.set(0,0.42,0.32); beak.rotation.x=Math.PI/2.2; o.add(beak);
+    const bk = new T.Mesh(new T.BoxGeometry(0.34,0.24,0.04), mat("#5a7fc9")); bk.position.set(0,0.22,0.34); bk.rotation.x=-0.5; o.add(bk);
+    return o;
+  }
+  [["#c79a6b",0.6,2.2],["#a9805a",2.1,2.0],["#d4ad7f",3.7,2.3],["#b98d62",5.0,2.1]].forEach(([c,a,r],i)=>{
+    const o = makeOwl(c); o.position.set(Math.sin(a)*r, 0, Math.cos(a)*r); o.lookAt(0,0,0); o.userData.phase=i*1.3; scene.add(o); owls.push(o);
+  });
+
+  // 카메라: 가운데에서 둘러보기
+  let yaw = Math.PI, pitch = -0.12, dist = -6.8, tYaw = yaw, tDist = dist;
+  function placeCamera(){
+    const dx = Math.sin(yaw), dz = Math.cos(yaw);
+    const camH = 2.3 - Math.max(0, dist)*0.08;
+    camera.position.set(dx*dist, camH, dz*dist);
+    camera.lookAt(dx*(dist+6), camH + Math.tan(pitch)*6, dz*(dist+6));
+  }
+  function resize(){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; renderer.setSize(w,h,false); camera.aspect=w/h; camera.fov = w<h ? 72 : 56; camera.updateProjectionMatrix(); }
+  new ResizeObserver(resize).observe(box); resize();
+
+  // 드래그 / 핀치 / 탭
+  const ptrs = new Map(); let downX=0, downY=0, moved=0, pinch0=0, dist0=0;
+  const el = renderer.domElement;
+  el.addEventListener("pointerdown", e=>{ el.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); downX=e.clientX; downY=e.clientY; moved=0;
+    if(ptrs.size===2){ const [a,b]=[...ptrs.values()]; pinch0=Math.hypot(a.x-b.x,a.y-b.y); dist0=tDist; } hideHint(); });
+  el.addEventListener("pointermove", e=>{ if(!ptrs.has(e.pointerId)) return; const p=ptrs.get(e.pointerId); const dx=e.clientX-p.x, dy=e.clientY-p.y; p.x=e.clientX; p.y=e.clientY;
+    moved += Math.abs(dx)+Math.abs(dy);
+    if(ptrs.size===1){ tYaw += dx*0.006; pitch = Math.max(-0.35, Math.min(0.3, pitch - dy*0.003)); }
+    else if(ptrs.size===2){ const [a,b]=[...ptrs.values()]; const d=Math.hypot(a.x-b.x,a.y-b.y); tDist = Math.max(-7.8, Math.min(5, dist0 + (d-pinch0)*0.02)); } });
+  const up = e=>{ if(!ptrs.has(e.pointerId)) return; ptrs.delete(e.pointerId); if(moved<8 && ptrs.size===0) tap(e.clientX, e.clientY); };
+  el.addEventListener("pointerup", up); el.addEventListener("pointercancel", e=>ptrs.delete(e.pointerId));
+  el.addEventListener("wheel", e=>{ e.preventDefault(); tDist = Math.max(-7.8, Math.min(5, tDist - e.deltaY*0.01)); }, {passive:false});
+
+  const ray = new T.Raycaster(), v2 = new T.Vector2();
+  function tap(x,y){
+    const r = el.getBoundingClientRect();
+    v2.set(((x-r.left)/r.width)*2-1, -((y-r.top)/r.height)*2+1);
+    ray.setFromCamera(v2, camera);
+    const hit = ray.intersectObjects(pick, false)[0]; if(!hit) return;
+    let o = hit.object; while(o && o.userData.level===undefined && !o.userData.today) o = o.parent;
+    if(!o) return;
+    if(o.userData.today) openBook(todayBook().t);
+    else { goShelf(o.userData.level); openShelf(o.userData.level); }
+  }
+  function goShelf(k){
+    const i = SHELVES.findIndex(l=>l.k===k); if(i<0) return;
+    const target = i*(Math.PI*2/SHELVES.length);
+    let d = target - tYaw; d = Math.atan2(Math.sin(d), Math.cos(d)); tYaw += d; tDist = 2.6; pitch = 0.04;
+    document.querySelectorAll("#libJump button").forEach(b=>b.classList.toggle("on", b.dataset.k===k));
+  }
+  const jump = document.getElementById("libJump");
+  jump.innerHTML = `<button data-k="center">🏠 가운데</button>` + SHELVES.map(l=>`<button data-k="${l.k}">AR ${l.n}</button>`).join("");
+  jump.querySelectorAll("button").forEach(b=>b.onclick=()=>{
+    if(b.dataset.k==="center"){ tDist=-6.8; pitch=-0.12; jump.querySelectorAll("button").forEach(x=>x.classList.remove("on")); }
+    else { goShelf(b.dataset.k); openShelf(b.dataset.k); }
+    hideHint();
+  });
+  function hideHint(){ const h=document.getElementById("libHint"); if(h) h.style.opacity=0; }
+
+  const clock = new T.Clock();
+  lib.loop = function(){
+    if(!lib.running) return;
+    requestAnimationFrame(lib.loop);
+    const t = clock.getElapsedTime();
+    yaw += (tYaw-yaw)*0.12; dist += (tDist-dist)*0.1;
+    owls.forEach(o=>{ o.position.y = Math.abs(Math.sin(t*1.6+o.userData.phase))*0.06; o.rotation.z = Math.sin(t*0.8+o.userData.phase)*0.06; });
+    tSign.lookAt(camera.position.x, 1.75, camera.position.z);
+    glow.intensity = 0.8 + Math.sin(t*2)*0.15;
+    placeCamera(); renderer.render(scene, camera);
+  };
+  lib.ready = true; lib.running = document.body.classList.contains("in-lib"); lib.loop();
+}
+
+/* ===== 시작 ===== */
+function todayBook(){ const d=new Date(); return BOOKS[(d.getFullYear()*372+d.getMonth()*31+d.getDate()) % BOOKS.length]; }
+(function(){
+  const b = todayBook();
+  const th = document.getElementById("todayTh"); th.style.background = grad(b); th.textContent = b.e;
+  document.getElementById("todayTx").textContent = `${b.t} · AR ${b.lv.toFixed(1)}`;
+  document.getElementById("fToday").onclick = ()=>openBook(b.t);
+  document.getElementById("guideBox").innerHTML = GUIDE.map(g=>`<div class="gd"><div class="gl"><b>${g.n}</b><div><h3>${g.h}</h3><div class="r">${g.r}</div></div></div><p>${g.p}</p></div>`).join("");
+})();
+document.getElementById("q").oninput = e=>{st.q=e.target.value; render();};
+document.getElementById("tFav").onclick = ()=>{st.fav=!st.fav; render();};
+document.getElementById("tFirst").onclick = ()=>{st.first=!st.first; render();};
+document.getElementById("tSeries").onclick = ()=>{st.series=!st.series; render();};
+document.getElementById("tSort").onclick = ()=>{st.sort=(st.sort+1)%3; render();};
+tabs(document.getElementById("typeTabs"), TYPES, "type");
+tabs(document.getElementById("tagTabs"), TAGS, "tag");
+strip(); render(); route();
+if(HAS_PARTNERS){ const d=document.getElementById("topdisc"); d.textContent=DISCLOSURE; d.hidden=false; }
+</script>
+</body>
+</html>

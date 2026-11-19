@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://liblebooks.com/sitemap.xml
